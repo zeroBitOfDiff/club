@@ -15,10 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.nav-menu').classList.remove('active');
   }, false);
 
-  document.querySelector('#mailing-list').addEventListener('submit', function(e) {
+  var mailingList = document.querySelector('#mailing-list');
+  if (mailingList) {
+    mailingList.addEventListener('submit', function(e) {
       e.preventDefault();
       Bastide.mailingList.subscribe();
-  }, false)
+    }, false);
+  }
 }, false );
 function toggleLights() {
   document.getElementById("workshop-section").classList.toggle("light");
