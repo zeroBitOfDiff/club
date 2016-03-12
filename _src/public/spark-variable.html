@@ -1,0 +1,13 @@
+<div ng-if="device">
+	<input ng-model="properties.endpoint">
+	<button ng-click="getVariable()">Get variable</button>
+	<code>
+		curl https://api.particle.io/v1/devices/{{ device.device }}/{{ properties.endpoint }}?access_token={{ device.access_token }}
+	</code>
+	<code ng-show="result">
+		Result: {{result.name}} = {{result.result}}
+	</code>
+</div>
+<div ng-if="!device">
+	Please input your device ID at the top of the page.
+</div>

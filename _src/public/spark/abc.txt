@@ -1,0 +1,4 @@
+{ "device": "54ff67066672524821421167",
+	"code": "abc",
+	"access_token": "6318f602b1cc97d62387ea5fff9b7f02e9b414dd"
+}
