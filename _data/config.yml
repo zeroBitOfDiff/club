@@ -25,6 +25,11 @@
       date: 3/26/16
   workshops:
     -
+      name: 'Intro to React.js'
+      date: 3/18/2016
+      time: 6:15 PM
+      url: '/workshops/react'
+    -
       name: 'JavaScript & ES6'
       date: 2/19/2016
       time: 6:15 PM
