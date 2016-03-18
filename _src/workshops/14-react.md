@@ -22,7 +22,7 @@ Go ahead and add these two components after the `<main className="...` line. We'
 <InputBoxContainer placeholder="To-do item..." />
 ```
 
-Plunker will auto-reload the app for us, but of course, there will be no contento n the page since we haven't actually defined these components yet. If you opened the Inspector of your browser, you would see an error indicating that TodoList is not defined. This is fine.
+Plunker will auto-reload the app for us, but of course, there will be no content on the page since we haven't actually defined these components yet. If you opened the Inspector of your browser, you would see an error indicating that TodoList is not defined. This is fine.
 
 Add stubs for both of these:
 
