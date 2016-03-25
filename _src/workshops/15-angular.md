@@ -285,3 +285,48 @@ Now, that function will get called anytime the add button is clicked and `todoLi
 ```
 
 If you check out the application now, the input box should be hidden and clicking the add button should show the input box for you to then input things.
+
+## Hiding the Input Box after adding
+
+We don't want the input box to always show once we press the add button and we also want the input to clear once we hit enter. Let's add a line to the `addItem` function to hide the input box once we add an item. This is as simple as setting the `todoList.addButtonClicked` variable to false.
+
+```js
+// script.js
+...
+todoList.addItem = function (event, input) {
+	if (event.keyCode === 13) {
+		todoList.items.push({
+			id: todoList.items.length,
+			title: input
+		})
+		todoList.addButtonClicked = false
+	}
+}
+...
+```
+
+The only change in the above code is the last line that sets `todoList.addButtonClicked` to false. Now when you press enter, the input box will close and clear!
+
+# Crossing out Checked Items
+
+The last thing we are going to do is cross out items that are checked. This will conditionally apply a class to the `itemTemplate` that will cross out items when they are checked. To do that, we will need to keep track of which items are checked and which aren't.
+
+We are going to utilize `ng-model` again for this, and simply add a `checked` property onto each item on the view. When an item is checked, we will set `item.checked` to true and the class will be applied to the div containing the item.
+
+We will use `ng-click` again to set a flag to true or false when the item is clicked on. We will also use something called `ng-class` to conditionally apply the `checked` class to the item container. `ng-class` is an attribute that applies a class depending on a condition. It takes an object with class names as the keys and conditions as the values. When the condition is true, the class name will be applied.
+
+```html
+<!-- index.html -->
+...
+<div id="itemTemplate" class="item" ng-repeat="item in todoList.items" ng-class="{checked: item.checked}">
+	<div class="checkBox">
+		<input type="checkbox" id="{{item.id}}" ng-model="item.checked">
+	</div>
+	<div class="itemTitle" ng-click="item.checked = !item.checked">{{item.title}}</div>
+</div>
+...
+```
+
+So we added an `ng-click` that takes `item.checked` and inverts it, meaning when the item is not checked it will become checked and vice versa. We also added `ng-model="item.checked"` to the actual checkbox so that each item will have a `checked` property on it that is triggered by the checkbox's status. Also, notice we didn't pass in a function to `ng-clicked` and instead passed in an assignment.
+
+We also added the `ng-class` which took `{checked: item.checked}` as its value, meaning that when `item.checked` is true, the `checked` class will be applied.
