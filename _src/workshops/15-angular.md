@@ -240,3 +240,48 @@ todoList.addItem = function (event, input) {
 What the above piece of code does is it adds a function to the controller called `addItem` which takes an event and input. The event's `keyCode` is checked to see if it is `13`, which is the keycode for the enter button. If the enter button was pressed, we then push a new item onto the `itemList` array which has an `id` of the next element (the length of the array) and a `title` of the `input` since that is what the user wanted to add to the list.
 
 Running this now should let you add items to the list using the input box below the list.
+
+# Hiding/Showing using Angular
+
+We have a lovely add button that does nothing right now, but what it should be doing is showing that input box we just used. We can show and hide things conditionally using Angular, so let's do that now.
+
+In order to show/hide, we need to tell Angular that there is something we want to show/hide on a condition, and what the condition is. In our case, we want to show the input box when the add button is clicked. To do so, we need to add a click event to the button and hide the input otherwise.
+
+Adding the click event is very similar to adding the keypress event, except we don't have to worry about the actual event because we only care if it was clicked or not and not what button it was clicked with. In this case, rather than using `ng-keypress` we will be using (big surprise) `ng-click`.
+
+```html
+<!-- index.html -->
+...
+<div class="magic">
+	<button class="addButton" id="addButton" ng-click="clickAddButton()">+</button>
+</div>
+...
+```
+
+Now we have to write up that `clickAddButton` function on the Controller. The purpose of the function is to be a conditional on whether or not we show the input box, so the function should have some kind of flag in it for the input box to reference as well. We will be adding an `addButtonClicked` variable to the Controller that the function will set to true and the input box will check.
+
+```js
+// script.js
+...
+todoList.addButtonClicked = false
+
+todoList.clickAddButton = function () {
+	todoList.addButtonClicked = true
+}
+...
+```
+
+That block of code can go anywhere in the Controller. The initial reference of `todoList.addButtonClicked` is purely to initialize the variable to false before the button is ever clicked.
+
+Now, that function will get called anytime the add button is clicked and `todoList.addButtonClicked` will be set to true. Next is to tell the input box to only show up when that variable is true, and in turn, when the add button was clicked. We will use `ng-if` to tell Angular that the element should only show *if* something is true. Next, we pass it a condition, which in this case is the variable `todoList.addButtonClicked` which will either be true or false.
+
+```html
+<!-- index.html -->
+...
+<div class="inputBoxContainer" ng-if="addButtonClicked">
+	...
+</div>
+...
+```
+
+If you check out the application now, the input box should be hidden and clicking the add button should show the input box for you to then input things.
