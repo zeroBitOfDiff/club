@@ -330,3 +330,7 @@ We will use `ng-click` again to set a flag to true or false when the item is cli
 So we added an `ng-click` that takes `item.checked` and inverts it, meaning when the item is not checked it will become checked and vice versa. We also added `ng-model="item.checked"` to the actual checkbox so that each item will have a `checked` property on it that is triggered by the checkbox's status. Also, notice we didn't pass in a function to `ng-clicked` and instead passed in an assignment.
 
 We also added the `ng-class` which took `{checked: item.checked}` as its value, meaning that when `item.checked` is true, the `checked` class will be applied.
+
+# All Done!
+
+Here's the finished product: https://plnkr.co/edit/bpTapp34dmowNGT9d5b0
