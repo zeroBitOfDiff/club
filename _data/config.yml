@@ -14,16 +14,13 @@
   workshopDisplayLimit: 4
   events:
     -
-      name: 'React.js Workshop'
-      date: 3/18/16
-      url: 'https://www.facebook.com/events/1681542662108122/'
+      name: 'Chess AI Workshop'
+      date: 4/1/16
+      url: 'https://www.facebook.com/events/603376589838351/'
     -
-      name: 'Angular.js Workshop'
-      date: 3/25/16
-    -
-      name: 'Joint BBQ at Lake Claire'
-      date: 3/26/16
-      url: '/workshops/angular'
+      name: 'Hardware Workshop'
+      date: 4/15/16
+      rsvpRequired: true
   workshops:
     -
       name: 'Intro to React.js'
