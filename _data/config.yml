@@ -28,6 +28,11 @@
       time: 6:15 PM
       url: '/workshops/angular'
     -
+      name: 'Chess Demo Files'
+      date: 4/1/2016
+      time: 6:15 PM
+      url: '/ChessDemo.zip'
+    -
       name: 'Intro to React.js'
       date: 3/18/2016
       time: 6:15 PM
