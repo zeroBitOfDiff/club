@@ -14,13 +14,14 @@
   workshopDisplayLimit: 4
   events:
     -
-      name: 'Chess AI Workshop'
-      date: 4/1/16
-      url: 'https://www.facebook.com/events/603376589838351/'
+      name: 'Developing secure software'
+      date: 4/8/16
+      url: 'https://www.facebook.com/events/1685878401687000/'
+      notice: 'New location!'
     -
       name: 'Hardware Workshop'
       date: 4/15/16
-      rsvpRequired: true
+      notice: 'Please RSVP!'
   workshops:
     -
       name: 'Chess Demo Files'
