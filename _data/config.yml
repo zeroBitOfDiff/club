@@ -14,14 +14,10 @@
   workshopDisplayLimit: 4
   events:
     -
-      name: 'Developing secure software'
-      date: 4/8/16
-      url: 'https://www.facebook.com/events/1685878401687000/'
-      notice: 'New location!'
-    -
       name: 'Hardware Workshop'
       date: 4/15/16
       notice: 'Please RSVP!'
+      url: 'http://goo.gl/forms/JJxMeg24Ho'
   workshops:
     -
       name: 'Chess Demo Files'
