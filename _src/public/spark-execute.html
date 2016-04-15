@@ -2,7 +2,7 @@
 	<input ng-model="properties.endpoint">
 	<input ng-model="properties.params">
 	<button ng-click="execute()">Execute</button>
-	<code>
+	<code style="display:block">
 		curl https://api.particle.io/v1/devices/{{ device.device }}/{{ properties.endpoint }} -d access_token={{ device.access_token }} -d params={{ properties.params}}
 	</code>
 </div>

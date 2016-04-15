@@ -20,6 +20,11 @@
       url: 'http://goo.gl/forms/JJxMeg24Ho'
   workshops:
     -
+      name: 'IoT Workshop'
+      date: 4/15/2016
+      time: 6:15 PM
+      url: '/workshops/iot'
+    -
       name: 'Web Security Slides'
       date: 4/08/2016
       time: 6:15 PM

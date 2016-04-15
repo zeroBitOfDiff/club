@@ -1,0 +1,4 @@
+{ "device": "DK",
+	"code": "9",
+	"access_token": "7ded234f5b8e6693e91ef0571f4b0116c53862e3"
+}
