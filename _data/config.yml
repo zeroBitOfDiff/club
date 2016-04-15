@@ -14,13 +14,31 @@
   workshopDisplayLimit: 4
   events:
     -
-      name: 'Using GitHub Effectively Talk'
-      date: 3/4/16
-      url: 'https://docs.google.com/presentation/d/13qPtz1Q9tSyIgg0BF09czAjLLFc5UcGvVP_in5Hh_zk/edit?usp=sharing'
-    -
-      name: 'No Meeting (Spring Break!)'
-      date: 3/11/16
+      name: 'Hardware Workshop'
+      date: 4/15/16
+      notice: 'Please RSVP!'
+      url: 'http://goo.gl/forms/JJxMeg24Ho'
   workshops:
+    -
+      name: 'Web Security Slides'
+      date: 4/08/2016
+      time: 6:15 PM
+      url: 'https://docs.google.com/presentation/d/1Zvd1EN1-SPl0Xgj74GS3jh6vVSVufNYMV9S3GltNiCk/edit#slide=id.p'
+    -
+      name: 'Chess Demo Files'
+      date: 4/01/2016
+      time: 6:15 PM
+      url: '/ChessDemo.zip'
+    -
+      name: 'Intro to Angular.js'
+      date: 3/25/2016
+      time: 6:15 PM
+      url: '/workshops/angular'
+    -
+      name: 'Intro to React.js'
+      date: 3/18/2016
+      time: 6:15 PM
+      url: '/workshops/react'
     -
       name: 'JavaScript & ES6'
       date: 2/19/2016

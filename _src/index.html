@@ -47,6 +47,7 @@ resources:
         <div class="section__content no-margin">
           <p class="lead">Tech Knights is a student organization at the University of Central Florida, devoted to the builder in everyone. As an RSO, we provide workshops, activities, and support for the hackers of UCF, giving the tools and skills needed to build something extraordinary.</p>
           <p class="lead meetings">Meetings every {{ page.meeting.day }} at {{ page.meeting.time }} in {{ page.meeting.location }}</p>
+          <p class="announcement">Friday, April 8th's meeting will be held at 4:30pm in ENG102</p>
         </div>
       </div>
     </div>
@@ -66,6 +67,9 @@ resources:
                 <li>
                   <a class="card" href="{{ event.url }}" target="_blank">
                     <span class="card__date">{{ event.date }}</span> {{ event.name }}
+                    {% if event.notice !== 'none' %}
+                      <span class="card__notice">{{ event.notice }}</span>
+                    {% endif %}
                   </a>
                 </li>
               {% elif loop.index0 < site.eventDisplayLimit %}
