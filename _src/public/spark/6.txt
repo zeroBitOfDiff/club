@@ -1,0 +1,4 @@
+{ "device": "55ff70066678505537081667",
+	"code": "6",
+	"access_token": "971ae15ad7f8161793b2dacde0bc136b71bd657b"
+}

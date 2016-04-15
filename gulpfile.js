@@ -36,6 +36,8 @@ swig.setDefaults({ cache: false });
 gulp.task('html', function() {
   return gulp.src([
     './_src/**/*.html',
+    '!./_src/public/',
+    '!./_src/public/**',
     '!./_src/assets/',
     '!./_src/assets/**'
   ])
