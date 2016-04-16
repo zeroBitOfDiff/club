@@ -4,19 +4,11 @@ slug: workshops/iot
 template: workshop
 author: Jonathan Warner
 ---
-
-# Test
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
 <script src="/frontend.js"></script>
 <div ng-app="sparkdemo">
 <div ng-controller="FrameCtrl as FrameCtrlVM">
   <div></div>
-
-In this workshop, we will be making a Twitter bot written in Javascript using Node.js. What are these words I am saying??
-
-#### Twitter bot???
-
 
 # Step Zero
 1. Locate your Spark board
