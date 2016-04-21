@@ -14,10 +14,9 @@
   workshopDisplayLimit: 4
   events:
     -
-      name: 'Hardware Workshop'
-      date: 4/15/16
-      notice: 'Please RSVP!'
-      url: 'http://goo.gl/forms/JJxMeg24Ho'
+      name: 'Django Workshop'
+      date: 4/22/16
+      url: 'https://www.facebook.com/events/231659603856104/'
   workshops:
     -
       name: 'IoT Workshop'
