@@ -14,10 +14,17 @@
   workshopDisplayLimit: 4
   events:
     -
-      name: 'Django Workshop'
-      date: 4/22/16
-      url: 'https://www.facebook.com/events/231659603856104/'
+      name: 'SQL Workshop'
+      date: 9/9/2016
+      time: 6:10 PM 
+      url: '/workshops/sql'
+      notice: 'none'
   workshops:
+    -
+      name: 'Initial Commit'
+      date: 9/2/2016
+      time: 6:10 PM
+      url: 'https://www.facebook.com/events/1762713793946591/'
     -
       name: 'Django Workshop'
       date: 4/22/2016
