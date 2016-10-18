@@ -14,12 +14,32 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: 'Money, Investing, Job Offers, and You: Finances as a Developer'
+      date: 10/21/2016
+      time: 6:10 PM
+      url: 'https://www.facebook.com/events/1114152445336007/'
+      notice: none
+  workshops:
+    -
+      name: 'What is a Hackathon Anyway?'
+      date: 9/30/2016
+      time: 6:10 PM
+      url: 'https://www.facebook.com/events/1227352160620537/'
+    -
+      name: 'Interview Prep'
+      date: 9/23/2016
+      time: 6:10 PM
+      url: 'https://www.facebook.com/events/153380668447638/'
+    -
+      name: 'State Farm Lightning Talks'
+      date: 9/14/2016
+      time: 6:10 PM
+      url: 'https://www.facebook.com/events/908378785934242/'
+    -
       name: 'SQL Workshop'
       date: 9/9/2016
       time: 6:10 PM 
       url: '/workshops/sql'
-      notice: 'none'
-  workshops:
     -
       name: 'Initial Commit'
       date: 9/2/2016
