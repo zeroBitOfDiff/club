@@ -14,12 +14,17 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: 'Hacktoberfest Social'
+      date: 10/28/2016
+      time: 6:10 PM
+      url: 'https://www.facebook.com/events/664233557075538/'
+      notice: none
+  workshops:
+    -
       name: 'Money, Investing, Job Offers, and You: Finances as a Developer'
       date: 10/21/2016
       time: 6:10 PM
       url: 'https://slides.com/stevenpetryk/pf'
-      notice: none
-  workshops:
     -
       name: 'What is a Hackathon Anyway?'
       date: 9/30/2016
