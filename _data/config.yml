@@ -14,12 +14,17 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: 'Introduction to Android Development'
+      date: 11/4/2016
+      time: 6:10 PM
+      url: 'https://www.facebook.com/events/225923197820939/'
+      notice: none
+  workshops:
+    -
       name: 'Hacktoberfest Social'
       date: 10/28/2016
       time: 6:10 PM
       url: 'https://www.facebook.com/events/664233557075538/'
-      notice: none
-  workshops:
     -
       name: 'Money, Investing, Job Offers, and You: Finances as a Developer'
       date: 10/21/2016
@@ -43,7 +48,7 @@
     -
       name: 'SQL Workshop'
       date: 9/9/2016
-      time: 6:10 PM 
+      time: 6:10 PM
       url: '/workshops/sql'
     -
       name: 'Initial Commit'
