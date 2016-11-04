@@ -349,3 +349,91 @@ index be75660..6a1e020 100644
 ```
 
 And that's it! There are a ton of resources online to go further, and this is only the beginning. Good luck!
+
+## Bonus: Loading JSON
+
+My favorite way of loading JSON involves using OkHttp for HTTP requests and Gson for parsing JSON into native Java objects.
+
+First, add both libraries to your build.gradle file:
+
+```
+  compile 'com.google.code.gson:gson:2.7'
+  compile 'com.squareup.okhttp3:okhttp:3.4.1'
+```
+
+```
+public class ResponseBody {
+    int responseStatus;
+    ArrayList<ResultObject> results;
+
+    public int getResponseStatus() {
+        return responseStatus;
+    }
+
+    public ArrayList<ResultObject> getResults() {
+        return results;
+    }
+
+    public String getNameOfFirstResult() {
+        return getResults().get(0).getName();
+    }
+}
+```
+
+```
+public class ResultObject {
+    public String getName() {
+        return Name;
+    }
+
+    public String getFavoriteColor() {
+        return FavoriteColor;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    String Name;
+    String FavoriteColor;
+    @SerializedName("Age")
+    String age;
+}
+```
+
+```
+  OkHttpClient client = new OkHttpClient();
+  Request request = new Request.Builder()
+          .get()
+          .url("https://jaxbot.me/fakedata.json")
+          .build();
+
+  Call call = client.newCall(request);
+  try {
+      Response response = call.execute();
+
+      JsonElement element = new JsonParser().parse(response.body().charStream());
+      ResponseBody responseBody = new Gson().fromJson(element, ResponseBody.class);
+
+      Log.i(TAG, "Response status: " + responseBody.getResponseStatus());
+      Log.i(TAG, responseBody.getResults().get(0).getName());
+  } catch (IOException e) {
+      e.printStackTrace();
+  }
+```
+
+## Bonus: Loading images
+
+I like Glide for loading images.
+
+```
+dependencies {
+  compile 'com.github.bumptech.glide:glide:3.7.0'
+}
+```
+
+Use code like this to load images into an ImageView:
+
+```
+  Glide.with(this).load("https://techknights.org/assets/img/logo.png").into(findViewById(R.id.imageView));
+```
