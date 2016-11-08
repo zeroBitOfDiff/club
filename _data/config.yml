@@ -14,12 +14,17 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: 'Demystifying the Cloud'
+      date: 11/11/2016
+      time: 6:10 PM
+      url: 'https://www.facebook.com/events/886841571452433/'
+      notice: none
+  workshops:
+    -
       name: 'Introduction to Android Development'
       date: 11/4/2016
       time: 6:10 PM
       url: 'http://techknights.org/workshops/intro-android-workshop/'
-      notice: none
-  workshops:
     -
       name: 'Hacktoberfest Social'
       date: 10/28/2016
