@@ -14,12 +14,17 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: 'Continuous Integration with REV'
+      date: 11/18/2016
+      time: 6:10 PM
+      url: 'https://www.facebook.com/events/129890784155709/'
+      notice: none
+  workshops:
+    -
       name: 'Demystifying the Cloud'
       date: 11/11/2016
       time: 6:10 PM
       url: 'https://www.facebook.com/events/886841571452433/'
-      notice: none
-  workshops:
     -
       name: 'Introduction to Android Development'
       date: 11/4/2016
