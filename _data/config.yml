@@ -14,12 +14,18 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: 'Welcome to Bash!'
+      date: 1/27/2017
+      time: 6:20 PM
+      url: 'https://www.facebook.com/events/1888768291338123/'
+      notice: none
+
+  workshops:
+    -
       name: 'Continuous Integration with REV'
       date: 11/18/2016
       time: 6:10 PM
       url: 'https://www.facebook.com/events/129890784155709/'
-      notice: none
-  workshops:
     -
       name: 'Demystifying the Cloud'
       date: 11/11/2016
