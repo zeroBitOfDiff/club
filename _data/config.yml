@@ -17,7 +17,7 @@
       name: 'Welcome to Bash!'
       date: 1/27/2017
       time: 6:20 PM
-      url: 'https://www.facebook.com/events/1888768291338123/'
+      url: '/workshops/bash'
       notice: none
 
   workshops:
