@@ -14,19 +14,23 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: "Welcome to Python"
+      date: 2/10/2017
+      time: 6:20PM
+      url: "https://www.facebook.com/events/246693375785331/"
+      notice: none
+
+  workshops:
+    -
       name: "We've Got Your Hack"
       date: 2/3/2017
       time: 6:20 PM
       url: 'https://docs.google.com/presentation/d/1H_j1CCL817seTw9pL7RysexfP-uBeAoidjzFTVUUVHs/edit?usp=sharing'
-      notice: none
-
-  workshops:
     -
       name: 'Welcome to Bash!'
       date: 1/27/2017
       time: 6:20 PM
       url: '/workshops/bash'
-      notice: none
     -
       name: 'Continuous Integration with REV'
       date: 11/18/2016
