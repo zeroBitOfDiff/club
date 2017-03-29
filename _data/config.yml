@@ -14,13 +14,18 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: "Adventures in Functional Programming"
+      date: 3/31/2017
+      time: 6:20pm
+      url: "https://www.facebook.com/events/182003728978974/"
+      notice: none
+
+  workshops:
+    -
       name: "Alexa Skill Workshop"
       date: 2/24/2017
       time: 6:20pm
       url: "https://www.facebook.com/events/201285553686846/"
-      notice: none
-
-  workshops:
     -
       name: "Welcome to Python"
       date: 2/10/2017
