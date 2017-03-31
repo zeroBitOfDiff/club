@@ -84,7 +84,7 @@ IO.inspect Enum.map(grades, fn x -> Student.convert_ltog(x) end)
 
 With `convert_ltog()`, you may notice the case statement. This looks and acts very similar to switch statements in most languages. It will go through each possible case until it finds a match. For the purposes of the workshop, we will assume we are given valid characters so not to worry about what happens when we don't match!
 
-`grades` is matched with a new data type that we are seeing in Elixir, lists! They are similar to arrays in C, however, these are do not just contain homogenous, the same, type of data. We cannot access them the same way as arrays but in this case, we won't worry about that! However, do remember that order **does** matter!
+`grades` is matched with a new data type that we are seeing in Elixir, lists! They are similar to arrays in C, however, these do not contain homogenous, the same, type of data. We cannot access them the same way as arrays but in this case, we won't worry about that! However, do remember that order **does** matter!
 
 So what do I mean when I say higher-order functions? These are functions that can take a function as far as input. Our function `convert_ltog(letter)` will take a String and return its grade-point equivalent. So let's say our student has a set of grades (stored in `grades`) and we want to convert them into their GPA equivalent. We apply a "higher order function" that will take our grades and convert them. So `Enum.map` will take a collection and apply the `Student.convert_ltog()` function to each item in the collection. Think of higher-order functions as functions that accept functions as parameters.
 
@@ -129,7 +129,7 @@ grades = [ "A", "A-", "B-", "A" ]
 IO.puts Student.gpa(grades)
 ```
 
-With our additions, you may notice that we separate out our functions to do specific tasks. This is important in functional programming. We want things to be rather distinct and want to be able to say, "I know exactly where we are failing", and be able
+With our additions, you may notice that we separate out our functions to do specific tasks. This is important in functional programming. We want things to be  distinct to easily identify where there may be errors in the code. By writing more functions, we can fix errors these discrete errors.
 
 - `def compute_mean(grades) do` - Here we want to make our logic simple, to compute the mean, we need to know the sum and then divide by the length of our given collection (list). That's all this function should do and that's all we see. Nice and simple! When we want to calculate our GPA, we will just use this function.
 - `def gpa(letters) do` - This function will be the glue to get everything working. You notice, in this function, we are taking `letters`, so our collection which contains all of our letter grades. In this we also begin to make use of the `|>` (pipe) operator. With this we can say that whatever item in the previous expression will fill in the first parameter of the next function as if it were written explicitly there. It is a way to fluidly write out nested functions without having to store the variables along the way.
