@@ -139,3 +139,158 @@ Once you have done that, you just go into your terminal, and you can just do:
 
     $ elixir test.ex
     3.625
+
+# Taking it to Phoenix
+TL;DR: If you are interested to see the final project, you can just clone it from [GitHub](https://github.com/maxcell/sample-elixir) and follow the README.
+
+[Phoenix](http://www.phoenixframework.org) is a web framework built all in Elixir! It implements the Model-View-Controller (MVC) pattern, which you can see in classic frameworks such as Ruby on Rails and Django. We won't be showcasing a whole bunch through this workshop but just showing one feature out of the box with Phoenix which is Channels.
+
+Channels are a really exciting and powerful part of Phoenix that allow us to easily add soft-realtime features to our applications. Channels are based on a simple idea - sending and receiving messages. Senders broadcast messages about topics. Receivers subscribe to topics so that they can get those messages. Senders and receivers can switch roles on the same topic at any time. Since Elixir is based on message passing, you may wonder why we need this extra mechanism to send and receive messages. With Channels, neither senders nor receivers have to be Elixir processes. They can be anything that we can teach to communicate over a Channel - a JavaScript client, an iOS app, another Phoenix application, our watch. Also, messages broadcast over a Channel may have many receivers. Elixir processes communicate one to one.
+
+So let's get started! We are going to install some stuff for Phoenix which you can find all on [the official Phoenix installation guide](http://www.phoenixframework.org/docs/installation). 
+
+1. Make sure that you have Hex, the package manager for Elixir.
+ - If you have Elixir installed already, `mix local.hex`
+2. You **SHOULD** have Erlang already but follow the [link](http://www.phoenixframework.org/docs/installation#section-erlang) if it didn't work.
+3. Now to install Phoenix
+  - `mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez`
+4. You are gonna also need to have Node, which please use the [installer](https://nodejs.org/en/download/).
+
+OPTIONAL
+4. To get Phoenix to run, you may need to install a DB. You can technically do it with out, however, I just grab [Postgres](http://www.phoenixframework.org/docs/installation#section-postgresql).
+
+
+Surprise, frameworks have so many dependencies ='(. Anyway, we made it!
+
+## Setup
+To start our new Phoenix project, we will have to set it up! Head over to your terminal and:
+
+    # Creates a new Phoenix project called chatroom
+    $ mix phoenix.new chatroom
+
+    # Move into the project directory
+    $ cd chatroom
+    
+    # Get your depedencies up
+    mix deps.get && npm install
+    
+    # Setup the database
+    mix ecto.create
+
+    # FINALLY START THE SERVER
+    mix phoenix.server
+
+When you head over to [`localhost:4000`](http://localhost:4000), you should see:
+
+<img src="/pics/workshops/functional/initial_phoenix.png" alt="Initial Phoenix Landing Page"/>
+
+Let's change the landing page so we can showcase our chatbox, open up `web/templates/page/index.html.eex` and replace everything with this:
+
+```html
+<div id='message-list' class='row'>
+</div>
+
+<div class='row form-group'>
+  <div class='col-md-3'>
+    <input type='text' id='name' class='form-control' placeholder='Name' />
+  </div>
+  <div class='col-md-9'>
+    <input type='text' id='message' class='form-control' placeholder='Message' />
+  </div>
+</div>
+```
+
+Let's make sure to style it up, open up `web/static/css/app.css` and copy this in there:
+
+```css
+#message-list {
+  border: 1px solid #777;
+  height: 400px;
+  padding: 10px;
+  overflow: scroll;
+  margin-bottom: 50px;
+}
+```
+
+Now we should be seeing this:
+
+<img src="/pics/workshops/functional/chatroom_phoenix.png" alt="Initial Phoenix Landing Page"/>
+
+## Setting up Channels
+Our channel is going to be called `lobby` and so we should head to `web/channels/user_socket.ex` and then add a new line for:
+
+```elixir
+channel "lobby", Chatroom.LobbyChannel
+```
+
+We need to be sure to add a file describing our `Chatroom.LobbyChannel`. So let's create a new file called `web/channels/lobby_channel.ex` and then implement the code for the `lobby` channel. 
+
+```elixir
+defmodule Chatroom.LobbyChannel do
+  use Phoenix.Channel
+
+  def join("lobby", _payload, socket) do
+    {:ok, socket}
+  end
+
+  def handle_in("new_message", payload, socket) do
+    broadcast! socket, "new_message", payload
+    {:noreply, socket}
+  end
+end
+```
+
+The `join` method here always returns `{:ok, socket}` to allow all connections to the channel. The `handle_in` method is fired every time a new incoming message is received on the socket, which broadcasts that message to all other open sockets.
+
+## Frontend Fun
+Now we are going to add the functionality to joining a channel, but first we are gonna go back to our roots and add in jQuery into our `<head>...</head>`:
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+```
+
+To get the basic functionality of web sockets, go into `web/static/js/app.js` and uncomment the line:
+
+```js
+// ...
+import socket from "./socket"
+```
+
+AND NOW THE PIÈCE DE RÉSISTANCE!~ We need to add some logic for the socket stuff. Go towards the bottom, and you can delete everything below `socket.connect()` in `web/static/js/socket.js`:
+
+```js
+socket.connect()
+
+let channel = socket.channel("lobby", {});
+let list    = $('#message-list');
+let message = $('#message');
+let name    = $('#name');
+
+message.on('keypress', event => {
+  if (event.keyCode == 13) {
+    channel.push('new_message', { name: name.val(), message: message.val() });
+    message.val('');
+  }
+});
+
+channel.on('new_message', payload => {
+  list.append(`<b>${payload.name || 'Anonymous'}:</b> ${payload.message}<br>`);
+  list.prop({scrollTop: list.prop("scrollHeight")});
+});
+
+channel.join()
+  .receive("ok", resp => { console.log("Joined successfully", resp) })
+  .receive("error", resp => { console.log("Unable to join", resp) })
+```
+
+Now our chat app will be ready to go!!!
+
+# Further Readings!
+When I find something new, I really enjoy following up and reading through more content. Here is a curated list of things I have come across that may help you if you are interested in learning more!
+
+- [Awesome List - Elixir Posts](https://github.com/greyhwndz/awesome-elixir-posts)
+- [Up and Running with Phoenix](http://www.phoenixframework.org/docs/up-and-running)
+- [Elixir Examples](https://elixir-examples.github.io)
+- [Elixir Lang - Talks](https://github.com/elixir-lang/elixir/wiki/Talks)
+- [Elixir School](https://elixirschool.com/)
