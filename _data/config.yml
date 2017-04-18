@@ -14,13 +14,19 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: "Glorious PC Building Workshop"
+      date: 4/18/2017
+      time: 7:30pm
+      url: "https://docs.google.com/presentation/d/1u0I-kQArwB0fkCf1ZaqlJbc90xti9wutXXJXnDhMF1A/edit?usp=sharing"
+      notice: "NEW"
+
+  workshops:
+    -
       name: "Get Swifty! && Officer Elections"
       date: 4/11/2017
       time: 7:30pm
       url: "https://docs.google.com/presentation/d/1QNW6R_tjGJf7_eXCuZB7OZHodwc6QytoX-IF0Cepmh0/edit?usp=sharing"
-      notice: "NEW"
-
-  workshops:
+      notice: none
     -
       name: "Pizzzzzzzzaaaa"
       date: 4/4/2017
