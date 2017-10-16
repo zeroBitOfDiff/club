@@ -19,9 +19,9 @@
       time: 7:30pm
       url: "none"
       notice: "NEW"
-
+      
   workshops:
-     -
+    -
       name: "Glorious PC Building Workshop"
       date: 4/18/2017
       time: 7:30pm
