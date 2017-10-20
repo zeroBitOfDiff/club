@@ -14,11 +14,17 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: "What the Diff: A GitHub workshop"
+      date: 10/24/2017 
+      time: 7:30pm
+      url: "https://www.facebook.com/events/731065807081274/?ti=cl"
+      notice: "NEW"
+    -
       name: "One Web App to Rule Them All: Four Parts"
       date: 10/17/2017 - 11/7/2017
       time: 7:30pm
-      url: "none"
-      notice: "NEW"
+      url: "https://docs.google.com/presentation/d/1_vJ2gRVq2Yjhfb-5HsX-aMK3j6dNvvNtCkAZssag3Ko/edit?usp=sharing"
+      notice: none
       
   workshops:
     -
