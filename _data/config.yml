@@ -14,13 +14,19 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: "Angular 2 Crash Course"
+      date: 2/08/2018 
+      time: 7:30pm
+      url: "https://www.facebook.com/events/970026653152540/"
+      notice: "NEW"
+    
+  workshops:
+    -  
       name: "First General Meeting Spring 2018"
       date: 1/25/2018 
       time: 7:30pm
       url: "https://www.facebook.com/events/173123496791874/"
-      notice: "NEW"
-    
-  workshops:
+      notice: none
     -
       name: "The Return of the MEAN Stack: A Web App Continued"
       date: 10/31/2017 
