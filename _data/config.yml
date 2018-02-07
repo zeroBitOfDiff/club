@@ -14,19 +14,43 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: "Angular 2 Crash Course"
+      date: 2/08/2018 
+      time: 7:30pm
+      url: "https://www.facebook.com/events/970026653152540/"
+      notice: "NEW"
+    
+  workshops:
+    -  
+      name: "First General Meeting Spring 2018"
+      date: 1/25/2018 
+      time: 7:30pm
+      url: "https://www.facebook.com/events/173123496791874/"
+      notice: none
+    -
       name: "The Return of the MEAN Stack: A Web App Continued"
       date: 10/31/2017 
       time: 7:30pm
       url: "http://bit.ly/2zR0UGb"
-      notice: "NEW"
+      notice: none
     -
       name: "What the Diff: A GitHub workshop"
       date: 10/24/2017 
       time: 7:30pm
       url: "https://docs.google.com/presentation/d/1NYDJZP2-T_fU5EyW5FNzDX5j_isIFG6SnbDRYn-AzrA/edit?usp=sharing"
       notice: none
-      
-  workshops:
+    -
+      name: "One Web App to Rule Them All"
+      date: 10/17/2017 
+      time: 7:30pm
+      url: "https://docs.google.com/presentation/d/1NYDJZP2-T_fU5EyW5FNzDX5j_isIFG6SnbDRYn-AzrA/edit?usp=sharing"
+      notice: none
+    -
+      name: "The Fellowship of the Stack: Web App Repo"
+      date: 10/17/2017 
+      time: 7:30pm
+      url: "https://github.com/FultonG/TechKnights-Project-1"
+      notice: none
     -
       name: "One Web App to Rule Them All"
       date: 10/17/2017 
