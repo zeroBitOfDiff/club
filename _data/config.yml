@@ -3,7 +3,7 @@
   url: ''
   production_url: 'http://techknights.org/'
   author: The Tech Knights Team
-  email: team@knighthacks.org
+  email: techknights.ucf@gmail.com
   description: Giving people a space to learn and do things they’ve never done before
   socialLinks:
     facebook: 'https://www.facebook.com/groups/knighthacksclub/'
@@ -25,7 +25,7 @@
       name: "First General Meeting Spring 2018"
       date: 1/25/2018 
       time: 7:30pm
-      url: "https://www.facebook.com/events/173123496791874/"
+      url: "https://docs.google.com/presentation/d/1qH-BVLt95zwYqcIiyRSvnneRVUGd1U5Zoiu3zfZjdgo/edit?usp=sharing"
       notice: none
     -
       name: "The Return of the MEAN Stack: A Web App Continued"
