@@ -14,13 +14,19 @@
   workshopDisplayLimit: 4
   events:
     -
+      name: "Make a Keylogger with Python"
+      date: 2/15/2018 
+      time: 7:30pm
+      url: "https://www.facebook.com/events/141917213286972/"
+      notice: "NEW"
+    
+  workshops:
+    -
       name: "Angular 2 Crash Course"
       date: 2/08/2018 
       time: 7:30pm
       url: "https://www.facebook.com/events/970026653152540/"
-      notice: "NEW"
-    
-  workshops:
+      notice: none
     -  
       name: "First General Meeting Spring 2018"
       date: 1/25/2018 
