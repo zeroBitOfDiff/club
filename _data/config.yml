@@ -19,7 +19,13 @@
       time: 7:30pm
       url: "https://www.facebook.com/events/2073052236265687/"
       notice: "NEW"
-    
+    -      
+      name: "Cracking the Coding Interview"
+      date: 2/24/2018 
+      time: 12:00pm
+      url: "https://www.facebook.com/events/1737579479682995/"
+      notice: "NEW"
+
   workshops:
     -
       name: "Make a Keylogger with Python"
