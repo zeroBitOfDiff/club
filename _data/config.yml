@@ -14,19 +14,25 @@
   workshopDisplayLimit: 4
   events:
     -      
-      name: "Cracking the Coding Interview"
-      date: 2/24/2018 
-      time: 12:00pm
-      url: "https://www.facebook.com/events/1737579479682995/"
+      name: "Tech Knights Social"
+      date: 3/1/2018
+      time: 7:30pm
+      url: "https://www.facebook.com/events/101115434051504/"
       notice: "NEW"
-
+      
   workshops:
     -
+      name: "Cracking the Coding Interview"
+      date: 2/24/2018
+      time: 12:00pm
+      url: "https://drive.google.com/open?id=1ScHab3ykPNyAddDbe5IfOem69Sv57kSK"
+      notice: none
+    -
       name: "React Crash Course"
-      date: 2/22/2018 
+      date: 2/22/2018
       time: 7:30pm
       url: "https://drive.google.com/open?id=1IbnIdXmPNEhEH9RqutSjY7UyuanW8rdY"
-      notice: none     
+      notice: none    
     -
       name: "Make a Keylogger with Python"
       date: 2/15/2018 
