@@ -14,13 +14,19 @@
   workshopDisplayLimit: 4
   events:
     -      
+      name: "Future Opportunities In Tech And Career Development"
+      date: 3/8/2018
+      time: 7:30pm
+      url: "https://www.facebook.com/events/484213605309541/"
+      notice: "NEW"
+      
+  workshops:
+    -      
       name: "Tech Knights Social"
       date: 3/1/2018
       time: 7:30pm
       url: "https://www.facebook.com/events/101115434051504/"
-      notice: "NEW"
-      
-  workshops:
+      notice: none  
     -
       name: "Cracking the Coding Interview"
       date: 2/24/2018
