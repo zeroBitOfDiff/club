@@ -3,7 +3,7 @@
   url: ''
   production_url: 'http://techknights.org/'
   author: The Tech Knights Team
-  email: team@knighthacks.org
+  email: techknights.ucf@gmail.com
   description: Giving people a space to learn and do things they’ve never done before
   socialLinks:
     facebook: 'https://www.facebook.com/groups/knighthacksclub/'
@@ -13,19 +13,43 @@
   eventDisplayLimit: 4
   workshopDisplayLimit: 4
   events:
+    -      
+      name: "Tech Knights Social"
+      date: 3/1/2018
+      time: 7:30pm
+      url: "https://www.facebook.com/events/101115434051504/"
+      notice: "NEW"
+      
+  workshops:
+    -
+      name: "Cracking the Coding Interview"
+      date: 2/24/2018
+      time: 12:00pm
+      url: "https://drive.google.com/open?id=1ScHab3ykPNyAddDbe5IfOem69Sv57kSK"
+      notice: none
+    -
+      name: "React Crash Course"
+      date: 2/22/2018
+      time: 7:30pm
+      url: "https://drive.google.com/open?id=1IbnIdXmPNEhEH9RqutSjY7UyuanW8rdY"
+      notice: none    
+    -
+      name: "Make a Keylogger with Python"
+      date: 2/15/2018 
+      time: 7:30pm
+      url: "https://docs.google.com/presentation/d/1PT_TSRkQyRiz5ks_YyVXbF6uHdlFq46jZk11mBUk3bU/edit#slide=id.p"
+      notice: none
     -
       name: "Angular 2 Crash Course"
       date: 2/08/2018 
       time: 7:30pm
-      url: "https://www.facebook.com/events/970026653152540/"
-      notice: "NEW"
-    
-  workshops:
+      url: "https://drive.google.com/file/d/1TnGmHqxPpn-upkWLNY-CXYuOJGKOpct0/view"
+      notice: none
     -  
       name: "First General Meeting Spring 2018"
       date: 1/25/2018 
       time: 7:30pm
-      url: "https://www.facebook.com/events/173123496791874/"
+      url: "https://docs.google.com/presentation/d/1qH-BVLt95zwYqcIiyRSvnneRVUGd1U5Zoiu3zfZjdgo/edit?usp=sharing"
       notice: none
     -
       name: "The Return of the MEAN Stack: A Web App Continued"
@@ -38,18 +62,6 @@
       date: 10/24/2017 
       time: 7:30pm
       url: "https://docs.google.com/presentation/d/1NYDJZP2-T_fU5EyW5FNzDX5j_isIFG6SnbDRYn-AzrA/edit?usp=sharing"
-      notice: none
-    -
-      name: "One Web App to Rule Them All"
-      date: 10/17/2017 
-      time: 7:30pm
-      url: "https://docs.google.com/presentation/d/1NYDJZP2-T_fU5EyW5FNzDX5j_isIFG6SnbDRYn-AzrA/edit?usp=sharing"
-      notice: none
-    -
-      name: "The Fellowship of the Stack: Web App Repo"
-      date: 10/17/2017 
-      time: 7:30pm
-      url: "https://github.com/FultonG/TechKnights-Project-1"
       notice: none
     -
       name: "One Web App to Rule Them All"
